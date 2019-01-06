@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: test
+mybatis:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  configuration:
+    cache-enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+my-props:
+  white-list:
+    - /swagger
+    - /springfox-swagger-ui
+    - /webjars
+    - /api
+    - /error
+    - /test
+    - /user/login
+    - /auth

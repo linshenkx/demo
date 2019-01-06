@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+ mysql-db:
+  build: ./dockerfile
+  image: mysql-db
+  container_name: mysql-db
+  restart: always
+  command:
+   - --character-set-server=utf8mb4
+   - --collation-server=utf8mb4_unicode_ci
+  environment:
+   MYSQL_ROOT_PASSWORD: 123456
+  ports:
+  - "3307:3306"
+  volumes:
+  - /opt/docker-volumes/mysql/datadir:/var/lib/mysql

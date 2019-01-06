@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  demo:
+    build: ./dockerfile
+    image: login-demo
+    container_name: login-demo
+    restart: always
+    volumes:
+      - /opt/docker-volumes/demo/logs:/opt/app/myLogsDir
+    ports:
+      - 9999:9090
+
+
+
+
